@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fonegate_backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - HOST=0.0.0.0
+      - DB_PATH=/app/data/sms_gateway.db
+      - API_KEY=${API_KEY:-change-me-in-production}
+      - JWT_SECRET=${JWT_SECRET:-change-me-in-production}
+      - CORS_ORIGIN=*
+      - WEBHOOK_TIMEOUT_MS=5000
+    volumes:
+      - fonegate_data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: fonegate_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  fonegate_data:

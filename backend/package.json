@@ -1,0 +1,44 @@
+{
+  "name": "fonegate-backend",
+  "version": "1.0.0",
+  "description": "FoneGate - Self-hosted SMS Gateway Backend with Node.js, Express, WebSockets, and SQLite",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "sms",
+    "gateway",
+    "android",
+    "webhook",
+    "websocket",
+    "rest-api",
+    "open-source"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^11.0.5",
+    "ws": "^8.18.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.10.5",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,44 @@
+# ─── Node & Backend ──────────────────────────────────
+node_modules/
+dist/
+*.log
+backend/data/
+backend/.env
+
+# ─── Flutter / Dart ──────────────────────────────────
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+
+# ─── Mobile App (source excluded — release APK only) ─
+mobile_app/**
+!mobile_app/releases/
+!mobile_app/releases/**
+
+# ─── Frontend build artifacts ────────────────────────
+frontend/build/
+
+# ─── Android ─────────────────────────────────────────
+.gradle/
+local.properties
+*.aab
+
+# ─── Docker ──────────────────────────────────────────
+fonegate_data/
+
+# ─── OS & IDE ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ─── Misc ────────────────────────────────────────────
+*.swp
+*.swo
+*~
