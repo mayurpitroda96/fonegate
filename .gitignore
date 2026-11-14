@@ -18,6 +18,11 @@ mobile_app/**
 !mobile_app/releases/
 !mobile_app/releases/**
 
+# ─── Keystore & Signing (never commit) ───────────────
+*.jks
+*.keystore
+key.properties
+
 # ─── Frontend build artifacts ────────────────────────
 frontend/build/
 
