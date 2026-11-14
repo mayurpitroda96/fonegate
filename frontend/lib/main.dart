@@ -450,9 +450,9 @@ class _DashboardHomeScreenState extends State<DashboardHomeScreen> {
             child: const Text('Cancel'),
           ),
           FilledButton(
-            onPressed: () {
-              ApiService.baseUrl = controller.text.trim();
-              Navigator.pop(ctx);
+            onPressed: () async {
+              await ApiService.setBaseUrl(controller.text.trim());
+              if (ctx.mounted) Navigator.pop(ctx);
               _socket.disconnect();
               _socket.connect();
               _loadData();
