@@ -479,10 +479,13 @@ docker compose down
 | Variable | Default | Description |
 |---|---|---|
 | `PORT` | `8080` | Backend server port |
+| `HOST` | `0.0.0.0` | Backend bind address |
+| `DB_PATH` | `./data/sms_gateway.db` | SQLite database file path |
 | `API_KEY` | `change-me-in-production` | API key for device pairing |
 | `JWT_SECRET` | `change-me-in-production` | Secret for JWT token signing |
 | `CORS_ORIGIN` | `*` | Allowed CORS origins |
-| `WEBHOOK_TIMEOUT_MS` | `5000` | Webhook delivery timeout |
+| `WEBHOOK_TIMEOUT_MS` | `5000` | Webhook delivery timeout (ms) |
+| `FRONTEND_PORT` | `3000` | Frontend container exposed port |
 
 ---
 

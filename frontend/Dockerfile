@@ -1,4 +1,4 @@
-FROM ghcr.io/cirruslabs/flutter:3.29.3 AS builder
+FROM ghcr.io/cirruslabs/flutter:3.41.2 AS builder
 
 WORKDIR /app
 COPY pubspec.yaml pubspec.lock ./
